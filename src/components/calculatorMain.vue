@@ -12,11 +12,11 @@
 
                 <div id="numbers">
                     <button @click="modulo">%</button>
-                     <button @click="clearOnce">back</button>
-                     <button @click="clearAll">clear all</button>
+                     <button @click="clearOnce"><img src="../assets/left-arrow.png" /></button>
+                     <button @click="clearAll">Clear</button>
                     <button v-for="i in 10" :key="i" @click="getNumber(10-i)" >{{10-i}} </button>
                     <button @click="dot('.')">.</button>
-                     <button @click="themeClicked">theme</button>
+                     <button @click="themeClicked">Theme</button>
 
                 </div>
             
@@ -246,6 +246,12 @@ border-color: white;
 border-radius: 12%;
 
 }
+#numbers>button>img{
+   
+height: 20px;
+width:20px
+
+}
 #operators>button{
     margin-bottom: 38%;
     display: block;
@@ -265,5 +271,76 @@ border-radius: 12%;
     margin-top:20px;
 
 }
+/* -----------------------------------------------------------------*/
+@media  screen and (max-width:500px){
+#mainblock{
+margin: auto;
+    border: 1px solid black;
+    width:70%;
+    border-top: none;
 
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+}
+#divinput{
+     margin: auto;
+    border: 1px solid black;
+     width: 70%;
+     height: 60px;
+     border-top-left-radius: 15px;
+     border-top-right-radius: 15px;
+     border-bottom: none;
+       background-color: black;
+
+
+}
+#block1{
+    display: inline-block;
+    vertical-align: top;
+     gap: 4%;
+    margin: 20px 10px 0 10px;
+}
+#numbers{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+vertical-align: top;
+gap: 7%;
+
+}
+#numbers>button{
+   
+padding: 5px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border-color: white;
+border-radius: 15%;
+
+}
+#numbers>button>img{
+   
+height: 18px;
+width:18px
+
+}
+#operators>button{
+    margin-bottom: 38%;
+    display: block;
+    text-align: center;
+    width: 35px;
+    height: 28px;
+    border-color: white;
+    border-radius: 25%;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#input{
+    text-align: right;
+    padding-right: 10px;
+    height: 30px;
+    width: 200px;
+    margin-top:15px;
+
+}
+}
 </style>
