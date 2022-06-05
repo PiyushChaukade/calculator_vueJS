@@ -2,8 +2,10 @@
     <section>
           <h1>Calculator</h1>
 
+          <div id="divinput">
             <input id="input" :value="uservalue">
-        <div>
+          </div>
+        <div id="mainblock" :style="{'background-color': theme ? '#FC4': '#CCC'}">
           
 
             <div id="block1">
@@ -14,7 +16,7 @@
                      <button @click="clearAll">clear all</button>
                     <button v-for="i in 10" :key="i" @click="getNumber(10-i)" >{{10-i}} </button>
                     <button @click="dot('.')">.</button>
-                     <button >theme</button>
+                     <button @click="themeClicked">theme</button>
 
                 </div>
             
@@ -45,15 +47,20 @@
 export default {
    data(){
        return {
-           previous:null,
+           
 
            inital:0,
            uservalue:'0',
-           operator:null,
-           operatorClicked:false,
+           theme:false
+           
+           
        }
    },
    methods:{
+       themeClicked(){
+       this.theme = !this.theme;
+       
+       },
        getNumber(i){
       
         if(this.uservalue=='0'){
@@ -196,22 +203,48 @@ export default {
 </script>
 
 <style scoped>
+
+#mainblock{
+margin: auto;
+    border: 1px solid black;
+    width: 25%;
+    border-top: none;
+background-color:black ;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+  
+}
+#divinput{
+     margin: auto;
+    border: 1px solid black;
+     width: 25%;
+     height: 70px;
+     border-top-left-radius: 15px;
+     border-top-right-radius: 15px;
+     border-bottom: none;
+       background-color: black;
+}
 #block1{
     display: inline-block;
     vertical-align: top;
      gap: 5%;
     margin: 25px 15px 0 15px;
-
 }
 #numbers{
 display: grid;
 grid-template-columns: repeat(3,1fr);
 vertical-align: top;
 gap: 5%;
+
 }
 #numbers>button{
    
 padding: 10px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border-color: white;
+border-radius: 12%;
+
 }
 #operators>button{
     margin-bottom: 38%;
@@ -219,13 +252,18 @@ padding: 10px;
     text-align: center;
     width: 40px;
     height: 39px;
-    
+    border-color: white;
+    border-radius: 25%;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 #input{
     text-align: right;
     padding-right: 10px;
     height: 40px;
-    width: 290px;
+    width: 270px;
+    margin-top:20px;
+
 }
 
 </style>
