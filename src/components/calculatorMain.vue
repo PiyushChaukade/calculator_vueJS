@@ -5,7 +5,7 @@
           <div id="divinput">
             <input id="input" :value="uservalue">
           </div>
-        <div id="mainblock" :style="{'background-color': theme ? '#FC4': '#CCC'}">
+        <div id="mainblock" :style="{'background-color': theme ? 'tomato': '#CCC'}">
           
             <div id="block1">
 
@@ -211,10 +211,9 @@ export default {
 
 #mainblock{
 margin: auto;
-    border: 1px solid black;
+    border: 1px solid white;
     width: 25%;
     border-top: none;
-background-color:black ;
 border-bottom-left-radius: 10px;
 border-bottom-right-radius: 10px;
 
@@ -222,7 +221,6 @@ border-bottom-right-radius: 10px;
 }
 #divinput{
      margin: auto;
-    border: 1px solid black;
      width: 25%;
      height: 70px;
      border-top-left-radius: 15px;
@@ -251,12 +249,89 @@ border-color: white;
 border-radius: 12%;
 
 }
+#numbers>button:nth-child(4):hover{
+   
+   background-color: skyblue;
+   color: white;
+
+}
+#numbers>button:nth-child(5):hover{
+    background-color: skyblue;
+   color: white;  
+
+}
+#numbers>button:nth-child(6):hover{
+   
+   background-color: skyblue;
+   color: white;
+
+}
+#numbers>button:nth-child(7):hover{
+    background-color: skyblue;
+   color: white;  
+
+}
+#numbers>button:nth-child(8):hover{
+   
+   background-color: skyblue;
+   color: white;
+
+}
+#numbers>button:nth-child(9):hover{
+    background-color: skyblue;
+   color: white;  
+
+}
+#numbers>button:nth-child(10):hover{
+   
+   background-color: skyblue;
+   color: white;
+
+}
+#numbers>button:nth-child(11):hover{
+    background-color: skyblue;
+   color: white;  
+
+}
+#numbers>button:nth-child(12):hover{
+   
+   background-color: skyblue;
+   color: white;
+
+}
+#numbers>button:nth-child(13):hover{
+    background-color: skyblue;
+   color: white;  
+
+}
+#numbers>button:nth-child(14):hover{
+    background-color:royalblue;
+   color: white;  
+
+}
+#numbers>button:nth-child(3){
+   
+   background-color: red;
+   color: white;
+
+}
+#numbers>button:nth-child(1){
+   
+   background-color: green;
+   color: white;
+
+}
+#numbers>button:nth-child(2){
+   
+   background-color: grey;
+
+}
 #numbers>button>img{
    
 height: 20px;
 width:20px
 
-}
+} 
 #operators>button{
     margin-bottom: 38%;
     display: block;
@@ -265,6 +340,8 @@ width:20px
     height: 39px;
     border-color: white;
     border-radius: 25%;
+   background-color: green;
+   color: white;
 
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -280,7 +357,6 @@ width:20px
 @media  screen and (max-width:500px){
 #mainblock{
 margin: auto;
-    border: 1px solid black;
     width:70%;
     border-top: none;
 
@@ -291,7 +367,6 @@ border-bottom-right-radius: 10px;
 }
 #divinput{
      margin: auto;
-    border: 1px solid black;
      width: 70%;
      height: 60px;
      border-top-left-radius: 15px;
@@ -322,6 +397,83 @@ border-color: white;
 border-radius: 15%;
 
 }
+#numbers>button:nth-child(3){
+   
+   background-color: red;
+   color: white;
+
+}
+#numbers>button:nth-child(1){
+   
+   background-color: green;
+   color: white;
+
+}
+#numbers>button:nth-child(2){
+   
+   background-color: grey;
+
+}
+#numbers>button:nth-child(4):hover{
+   
+   background-color: skyblue;
+   color: white;
+
+}
+#numbers>button:nth-child(5):hover{
+    background-color: skyblue;
+   color: white;  
+
+}
+#numbers>button:nth-child(6):hover{
+   
+   background-color: skyblue;
+   color: white;
+
+}
+#numbers>button:nth-child(7):hover{
+    background-color: skyblue;
+   color: white;  
+
+}
+#numbers>button:nth-child(8):hover{
+   
+   background-color: skyblue;
+   color: white;
+
+}
+#numbers>button:nth-child(9):hover{
+    background-color: skyblue;
+   color: white;  
+
+}
+#numbers>button:nth-child(10):hover{
+   
+   background-color: skyblue;
+   color: white;
+
+}
+#numbers>button:nth-child(11):hover{
+    background-color: skyblue;
+   color: white;  
+
+}
+#numbers>button:nth-child(12):hover{
+   
+   background-color: skyblue;
+   color: white;
+
+}
+#numbers>button:nth-child(13):hover{
+    background-color: skyblue;
+   color: white;  
+
+}
+#numbers>button:nth-child(14):hover{
+    background-color:royalblue;
+   color: white;  
+
+}
 #numbers>button>img{
    
 height: 18px;
@@ -336,6 +488,7 @@ width:18px
     height: 28px;
     border-color: white;
     border-radius: 25%;
+   background-color: green;
 
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
