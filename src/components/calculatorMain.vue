@@ -7,7 +7,6 @@
           </div>
         <div id="mainblock" :style="{'background-color': theme ? '#FC4': '#CCC'}">
           
-
             <div id="block1">
 
                 <div id="numbers">
@@ -136,7 +135,13 @@ export default {
         let getAns=[]   
         console.log(this.uservalue)
 
-        let ans= (this.uservalue.split(/[+-/*]/))
+        let ans= (this.uservalue.split(/[\\+\-/%\\*]/))
+        // let dotAns= (this.uservalue.split('+'))
+        //  dotAns= (this.uservalue.split('-'))
+        //  dotAns= (this.uservalue.split('*'))
+        //  dotAns= (this.uservalue.split('/'))
+
+        // console.log('dotAns',dotAns)
         
         console.log("ans",ans)
        
@@ -194,7 +199,7 @@ export default {
         }
         console.log(this.inital)
 
-        this.uservalue = this.inital.toString();
+        this.uservalue = this.inital.toString()
         this.inital=0;
 
        },
@@ -235,7 +240,7 @@ border-bottom-right-radius: 10px;
 display: grid;
 grid-template-columns: repeat(3,1fr);
 vertical-align: top;
-gap: 5%;
+gap: 6%;
 
 }
 #numbers>button{
